@@ -20,8 +20,6 @@ public class Mapper extends Thread {
     SynchronizedQueue< Integer > countQueue
   ) {
 
-    System.out.println( "Files queue size: " + filesQueue.size() );
-
     /* Initialize instance variables */
     this.filesSemaphore = filesSemaphore;
     this.filesQueue = filesQueue;

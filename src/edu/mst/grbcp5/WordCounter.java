@@ -101,18 +101,12 @@ public class WordCounter {
 
     /* Start each mapper thread */
     for ( Mapper mapper : this.mappers ) {
-
-      System.out.println( "Starting mapper thread" );
-
       mapper.setWord( word );
       mapper.start();
     }
 
     /* Wait for each mapper thread to complete */
     for( Mapper mapper : this.mappers ) {
-
-      System.out.println( "Waiting for mapper thread" );
-
       try {
         mapper.join();
       } catch ( InterruptedException e ) {
